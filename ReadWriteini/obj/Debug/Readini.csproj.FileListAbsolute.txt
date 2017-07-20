@@ -1,0 +1,8 @@
+D:\Code\CS实例好几十例\Readini\obj\Debug\Readini.csprojResolveAssemblyReference.cache
+D:\Code\CS实例好几十例\Readini\obj\Debug\Readini.Form1.resources
+D:\Code\CS实例好几十例\Readini\obj\Debug\Readini.Properties.Resources.resources
+D:\Code\CS实例好几十例\Readini\obj\Debug\Readini.csproj.GenerateResource.Cache
+D:\Code\CS实例好几十例\Readini\bin\Debug\Readini.exe
+D:\Code\CS实例好几十例\Readini\bin\Debug\Readini.pdb
+D:\Code\CS实例好几十例\Readini\obj\Debug\Readini.exe
+D:\Code\CS实例好几十例\Readini\obj\Debug\Readini.pdb

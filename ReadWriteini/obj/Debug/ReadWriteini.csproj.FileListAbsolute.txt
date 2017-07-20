@@ -1,0 +1,2 @@
+D:\Code\CS实例好几十例\ReadWriteini\obj\Debug\Readini.exe
+D:\Code\CS实例好几十例\ReadWriteini\obj\Debug\Readini.pdb
