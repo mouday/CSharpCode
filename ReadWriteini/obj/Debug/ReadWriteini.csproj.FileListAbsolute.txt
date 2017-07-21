@@ -1,2 +1,10 @@
 D:\Code\CS实例好几十例\ReadWriteini\obj\Debug\Readini.exe
 D:\Code\CS实例好几十例\ReadWriteini\obj\Debug\Readini.pdb
+D:\GitHub\GitHub\ReadWriteini\obj\Debug\Readini.exe
+D:\GitHub\GitHub\ReadWriteini\obj\Debug\Readini.pdb
+D:\GitHub\GitHub\ReadWriteini\bin\Debug\Readini.exe
+D:\GitHub\GitHub\ReadWriteini\bin\Debug\Readini.pdb
+D:\GitHub\GitHub\ReadWriteini\obj\Debug\ReadWriteini.csprojResolveAssemblyReference.cache
+D:\GitHub\GitHub\ReadWriteini\obj\Debug\Readini.Form1.resources
+D:\GitHub\GitHub\ReadWriteini\obj\Debug\Readini.Properties.Resources.resources
+D:\GitHub\GitHub\ReadWriteini\obj\Debug\ReadWriteini.csproj.GenerateResource.Cache

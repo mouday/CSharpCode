@@ -33,9 +33,48 @@ namespace Readini
 
         #endregion
 
-        #region 读Ini文件
+        private string _path;
+        public ReadWriteini(string path)
+        {
+            this._path = path;     
+        }
 
-        public static string ReadIniData(string Section, string Key, string NoText, string iniFilePath)
+        #region 读Ini文件
+        /// <summary>
+        /// 读取ini方法
+        /// </summary>
+        /// <param name="Section"></param>
+        /// <param name="Key"></param>
+        /// <returns></returns>
+        public  string ReadIniData(string Section, string Key)
+        {
+            //这里的NoText对应API函数的def参数，它的值由用户指定，
+            //是当在配置文件中没有找到具体的Value时，就用NoText的值来代替。
+            //NoText 可以为null或""
+            string iniFilePath = this._path;
+            string NoText = "NoText";
+            if (File.Exists(iniFilePath))
+            {
+                StringBuilder temp = new StringBuilder(1024);
+                GetPrivateProfileString(Section, Key, NoText, temp, 1024, iniFilePath);
+                return temp.ToString();
+            }
+            else
+            {
+                return String.Empty;
+            }
+        }
+        
+        
+        /// <summary>
+        ///静态方法读取ini 
+        /// </summary>
+        /// <param name="Section"></param>
+        /// <param name="Key"></param>
+        /// <param name="NoText"></param>
+        /// <param name="iniFilePath"></param>
+        /// <returns></returns>
+        public  static  string ReadIniData(string Section, string Key, string NoText, string iniFilePath)
         {
             //这里的NoText对应API函数的def参数，它的值由用户指定，
             //是当在配置文件中没有找到具体的Value时，就用NoText的值来代替。
@@ -55,7 +94,43 @@ namespace Readini
         #endregion
 
         #region 写Ini文件
-
+        /// <summary>
+        /// 写入ini方法
+        /// </summary>
+        /// <param name="Section"></param>
+        /// <param name="Key"></param>
+        /// <param name="Value"></param>
+        /// <returns></returns>
+        public  bool WriteIniData(string Section, string Key, string Value )
+        {
+            string iniFilePath=this._path;
+            if (File.Exists(iniFilePath))
+            {
+                long OpStation = WritePrivateProfileString(Section, Key, Value, iniFilePath);
+                if (OpStation == 0)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+       
+        
+        /// <summary>
+        /// 静态方法写入ini文件
+        /// </summary>
+        /// <param name="Section"></param>
+        /// <param name="Key"></param>
+        /// <param name="Value"></param>
+        /// <param name="iniFilePath"></param>
+        /// <returns></returns>
         public static bool WriteIniData(string Section, string Key, string Value, string iniFilePath)
         {
             if (File.Exists(iniFilePath))
